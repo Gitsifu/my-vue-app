@@ -4,10 +4,6 @@ import Vue from 'vue'
 import axios from 'axios';
 import ip from './address'
 
-let $Vue = new Vue();
-
-
-
 let HTTP = {};
 
 /**
@@ -19,21 +15,18 @@ let HTTP = {};
  * @returns {{resData}} 成功就返回具体数据
  */
 HTTP.post = function (url, data, callback) {
-    axios.post(ip + url, data)
-        .then(function (res) {
-            //响应成功回调
-            if (res.data.code === '200') {
-                callback(res.data.data);
-            } else {
-                $Vue.$Message.error({
-                    content: msg[res.data.code],
-                    duration: 3,
-                });
-            }
-        })
-        .catch(function (err) {
-            $Vue.$Message.error('网络异常，请刷新~');
-        });
+  axios.post(ip + url, data)
+    .then(function (res) {
+      //响应成功回调
+      if (res.data.code === '200') {
+        callback(res.data.data);
+      } else {
+        alert(msg[res.data.code]);
+      }
+    })
+    .catch(function (err) {
+      alert('网络异常，请刷新~');
+    });
 };
 
 /**
@@ -44,22 +37,19 @@ HTTP.post = function (url, data, callback) {
  * @param callback
  */
 HTTP.get = function (url, data, callback) {
-    let params = {params: data}
-    axios.get(ip + url, params)
-        .then(function (res) {
-            //响应成功回调
-            if (res.data.code === '200') {
-                callback(res.data.data)
-            } else {
-                $Vue.$Message.error({
-                        content: msg[res.data.code],
-                        duration: 3,
-                    });
-            }
-        })
-        .catch(function (err) {
-            $Vue.$Message.error('网络异常，请刷新~');
-        });
+  let params = {params: data}
+  axios.get(ip + url, params)
+    .then(function (res) {
+      //响应成功回调
+      if (res.data.code === '200') {
+        callback(res.data.data)
+      } else {
+        alert(msg[res.data.code]);
+      }
+    })
+    .catch(function (err) {
+      alert('网络异常，请刷新~');
+    });
 };
 
 /**
@@ -70,24 +60,21 @@ HTTP.get = function (url, data, callback) {
  */
 HTTP.asyncGet = function (url, data, callback) {
   $.ajax({
-        type: "GET",
-        url: ip + url,
-        data: data,
-        async: false,
-        success: function (res) {
-            let obj = JSON.parse(res)
-            callback(obj.data)
-        },
-        error: function (res) {
-            $Vue.$Message.error({
-                content: msg[res.data.code],
-                duration: 3,
-            });
-        }
-    })
-        .catch(function (err) {
-            $Vue.$Message.error('网络异常，请刷新~');
-        });
+    type: "GET",
+    url: ip + url,
+    data: data,
+    async: false,
+    success: function (res) {
+      let obj = JSON.parse(res)
+      callback(obj.data)
+    },
+    error: function (res) {
+      alert(msg[res.data.code]);
+    }
+  })
+    .catch(function (err) {
+      alert('网络异常，请刷新~');
+    });
 }
 
 export default HTTP;
