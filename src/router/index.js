@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import ROUTER from './router'
+import ROUTERS from './router'
 
 Vue.use(Router)
 
@@ -18,7 +18,7 @@ let router = new Router({
   /**
    * 将配置好的路由添加到路由里
    */
-  routes: ROUTER
+  routes: ROUTERS
 })
 
 /**
