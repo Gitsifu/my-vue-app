@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @keyup.enter="login">
     账号：<input type="text" v-model="loginForm.username"/><br>
     密码：<input type="password" v-model="loginForm.password"/><br>
     <button @click="login">登陆</button>
