@@ -1,6 +1,5 @@
 'use strict'
 import msg from './codeMsgMap'
-import Vue from 'vue'
 import axios from 'axios';
 import ip from './address'
 

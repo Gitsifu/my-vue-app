@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import HTTP from "./lib/httpRequest";
 import 'jquery'
+import API from "./lib/api";
 
 Vue.config.productionTip = false
 
 Vue.prototype.$HTTP = HTTP;
+Vue.prototype.$API = API
 
 /* eslint-disable no-new */
 new Vue({

@@ -6,26 +6,29 @@ import ROLE_MAP from '../lib/roleMap'
 let ROUTERS = [
   {
     path: '/',
-    name: 'HelloWorld',
+    name: 'login',
     component: resolve => {
-      require(['@/components/HelloWorld'], resolve)
-    },
-    meta: {
-      //是否需要验证后才能访问
-      auth: true,
-      //角色'1'或者'2'才能访问此路由，如果不是，则无权访问
-      role: [ROLE_MAP['1'], ROLE_MAP['2']]
-    },
+      require(['@/views/login'], resolve)
+    }
   },
   {
     path: '/hello',
     name: 'hello',
     component: resolve => {
-      require(['@/components/Hello'], resolve)
+      require(['@/views/Hello'], resolve)
     },
     meta: {
+      //是否需要验证后才能访问
       auth: true,
-      role: [ROLE_MAP['1'], ROLE_MAP['2']]
+      //角色'1'才能访问此路由，如果不是，则无权访问
+      role: [ROLE_MAP['1']]
+    },
+  },
+  {
+    path: '/index',
+    name: 'index',
+    component: resolve => {
+      require(['@/views/index'], resolve)
     }
   }
 ];
