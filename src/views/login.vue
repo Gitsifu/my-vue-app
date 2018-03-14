@@ -23,6 +23,7 @@
       }
     },
     methods: {
+      //登陆
       login: function () {
         let param = this.loginForm;
         //执行登陆请求，并将用户信息保存到session中
