@@ -30,6 +30,13 @@ let ROUTERS = [
     component: resolve => {
       require(['@/views/index'], resolve)
     }
+  },
+  {
+    path: '/403',
+    name: '403',
+    component: resolve => {
+      require(['@/views/page-403'], resolve)
+    },
   }
 ];
 

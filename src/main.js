@@ -6,11 +6,13 @@ import router from './router'
 import HTTP from "./lib/httpRequest";
 import 'jquery'
 import API from "./lib/api";
+import ROLE_MAP from './lib/roleMap'
 
 Vue.config.productionTip = false
 
 Vue.prototype.$HTTP = HTTP;
-Vue.prototype.$API = API
+Vue.prototype.$API = API;
+Vue.prototype.$ROLE_MAP = ROLE_MAP;
 
 /* eslint-disable no-new */
 new Vue({
