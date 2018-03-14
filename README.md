@@ -1,6 +1,6 @@
 # 基于角色的权限控制前端vue开发demo
 
-
+启动项目后访问`http://localhost:8080`，使用账号为`admin`或者其他任何账号登陆查看效果（密码可以不填）
 
 > A Vue.js project
 
