@@ -7,7 +7,7 @@ const ROLE_MAP = {
   '1': 'wpoeriutwreioutk',//超级管理员
   '2': 'alh2324adadfasdf',//管理员
   '3': 'aprhglaeritfl',//操作员
-  '4': 'aijgdsadrf52'//托管员
+  '4': 'aijgdsadrf52lkj'//托管员
 };
 
 export default ROLE_MAP;

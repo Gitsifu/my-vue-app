@@ -13,9 +13,20 @@ let ROUTERS = [
     meta: {
       //是否需要验证后才能访问
       auth: true,
-      //需要角色'1'或者'2'才能访问此路由，如果不是，则无权访问
+      //角色'1'或者'2'才能访问此路由，如果不是，则无权访问
       role: [ROLE_MAP['1'], ROLE_MAP['2']]
     },
+  },
+  {
+    path: '/hello',
+    name: 'hello',
+    component: resolve => {
+      require(['@/components/Hello'], resolve)
+    },
+    meta: {
+      auth: true,
+      role: [ROLE_MAP['1'], ROLE_MAP['2']]
+    }
   }
 ];
 

@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div @click="demo">提交</div>
+    <button @click="demo">提交</button><br>
+    <router-link :to="{path: '/hello'}">to</router-link>
   </div>
 </template>
 
@@ -15,7 +16,7 @@
     },
     methods: {
       demo:function () {
-        this.$HTTP.asyncGet('',{},function (res) {
+        this.$HTTP.get('user',{},function (res) {
 
         })
       }
