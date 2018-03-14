@@ -8,7 +8,7 @@ let ROUTERS = [
     path: '/',
     name: 'login',
     component: resolve => {
-      require(['@/views/login'], resolve)
+      require(['@/views/Login'], resolve)
     }
   },
   {
@@ -28,14 +28,14 @@ let ROUTERS = [
     path: '/index',
     name: 'index',
     component: resolve => {
-      require(['@/views/index'], resolve)
+      require(['@/views/Index'], resolve)
     }
   },
   {
     path: '/403',
     name: '403',
     component: resolve => {
-      require(['@/views/page-403'], resolve)
+      require(['@/views/ErrorPage403'], resolve)
     },
   }
 ];
