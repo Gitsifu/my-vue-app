@@ -20,7 +20,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */
@@ -43,7 +43,8 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    //将  '/' 改成 './' 防止打包后在本地访问时出现空白页（实际上是放在nginx服务器上，需要改回默认配置，即 '/'）
+    assetsPublicPath: './',
 
     /**
      * Source Maps
