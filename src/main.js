@@ -7,9 +7,11 @@ import HTTP from "./lib/httpRequest";
 import 'jquery'
 import API from "./lib/api";
 import ROLE_MAP from './lib/roleMap'
+//引入mint-ui
 import Mint from 'mint-ui';
+//必须要引入下面这个，官网没有说，坑！！！
 import 'mint-ui/lib/style.css';
-
+//使用Mint-ui
 Vue.use(Mint);
 
 Vue.config.productionTip = false
