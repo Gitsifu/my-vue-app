@@ -7,6 +7,10 @@ import HTTP from "./lib/httpRequest";
 import 'jquery'
 import API from "./lib/api";
 import ROLE_MAP from './lib/roleMap'
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css';
+
+Vue.use(Mint);
 
 Vue.config.productionTip = false
 

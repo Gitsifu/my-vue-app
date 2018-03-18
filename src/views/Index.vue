@@ -4,11 +4,16 @@
       这是index页面
     </div>
     <button v-if="this.$ROLE_MAP['1'] === role">这个按钮只有admin用户才能看到</button><br>
-    <router-link :to="{path: '/hello'}">只有admin用户才能访问</router-link>
+    <router-link :to="{path: '/hello'}">只有admin用户才能访问</router-link><br>
+    <mt-button type="default">default</mt-button>
+    <mt-button type="primary">primary</mt-button>
+    <mt-button type="danger">danger</mt-button>
   </div>
 </template>
 
 <script>
+
+
   export default {
     name: 'index',
     components: {},
