@@ -1,5 +1,5 @@
  'use strict';
 
-const ip = 'http://xxx.xxx.xx.xx:8080/'
+const ip = 'http://localhost:3000/'
 
 export default ip;
