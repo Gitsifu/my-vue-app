@@ -1,5 +1,11 @@
 # 基于角色的权限控制及vue-axios封装的前端vue开发简单模板
 
+RUN IT:
+
+```
+npm run mockdev
+```
+
 启动项目后访问`http://localhost:8080`，使用账号为`admin`或者其他任何账号登陆查看效果（密码可以不填）
 
 ## 模拟数据：

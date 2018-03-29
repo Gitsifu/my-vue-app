@@ -1,5 +1,9 @@
 <template>
-    <div>Hello</div>
+  <div>
+    <div>Hello {{username}}</div>
+    <div>个人介绍：{{description}}</div>
+  </div>
+
 </template>
 
 <script>
@@ -8,11 +12,18 @@
         components: {},
         props: [],
         data() {
-            return {}
+            return {
+              username: '',
+              description: ''
+            }
         },
         methods: {},
         mounted() {
-
+          let that = this;
+          this.$HTTP.get(this.$API.userInfo,{},function (res) {
+            that.username = res.username;
+            that.description = res.description;
+          })
         }
     }
 </script>
