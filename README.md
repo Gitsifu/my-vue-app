@@ -2,7 +2,7 @@
 
 启动项目后访问`http://localhost:8080`，使用账号为`admin`或者其他任何账号登陆查看效果（密码可以不填）
 
-# 模拟数据：
+## 模拟数据：
 
 1.全局安装`json-server`:
 
@@ -30,6 +30,20 @@
     //启动模拟数据服务并启动此应用
     "mockdev": "npm run mock | npm run dev"
 ```
+
+
+## axios封装模块
+
+后台传输过来的数据应该长这样：
+```
+{
+  data: "",
+  code: "",
+  msg: ""
+}
+```
+需要包含这三个数据，否则需要修改`./src/lib/httpRequest.js`中的代码
+
 > A Vue.js project
 
 ## Build Setup
