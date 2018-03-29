@@ -60,6 +60,12 @@ npm run mockdev
 
 ## [js-cookie](https://www.npmjs.com/package/js-cookie)的使用
 
+集成js-cookie
+```
+npm install --save js-cookie
+```
+如何使用
+
 **方式一**：（**推荐**）
 
 在`.vue`文件中使用`this.$Cookies`即可获取到全局的Cookies对象，直接调用此对象的set,get,remove等方法即可。
