@@ -1,13 +1,15 @@
 # 基于角色的权限控制及vue-axios封装的前端vue开发简单模板
 ## 如何运行：
 
-安装依赖包
+1.安装依赖包
 ```
 npm install
 ```
-
-运行:
-
+2.安装`json-server`
+```
+npm install -g json-server
+```
+3.运行:
 ```
 npm run mockdev
 ```
