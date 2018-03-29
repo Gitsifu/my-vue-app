@@ -44,6 +44,51 @@
 ```
 需要包含这三个数据，否则需要修改`./src/lib/httpRequest.js`中的代码
 
+## [js-cookie](https://www.npmjs.com/package/js-cookie)的使用
+
+**方式一**：（**推荐**）
+
+在`.vue`文件中使用`this.$Cookies`即可获取到全局的Cookies对象，直接调用此对象的set,get,remove等方法即可。
+
+**方式二**：
+
+在`.vue`文件的`<script></script>`中引入:
+```
+import Cookies from 'js-cookie';
+```
+
+创建一个cookie，在整个网站上有效：
+```
+Cookies.set('name','value');
+```
+
+创建一个7天到期的cookie
+```
+Cookies.set('name', 'value', { expires: 7 });
+```
+
+创建一个7天到期的cookie，对当前页面的路径有效：
+```
+Cookies.set('name', 'value', { expires: 7, path: '' });
+```
+
+获取cookie
+```
+Cookies.get('name');
+```
+
+获取所有可见的cookie
+```
+Cookies.get();
+```
+
+删除cookie
+```
+Cookies.remove('name');
+```
+
+
+
 > A Vue.js project
 
 ## Build Setup
