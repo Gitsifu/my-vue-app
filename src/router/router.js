@@ -7,16 +7,12 @@ let ROUTERS = [
   {
     path: '/',
     name: 'login',
-    component: resolve => {
-      require(['@/views/Login'], resolve)
-    }
+    component: () => import('@/views/Login')
   },
   {
     path: '/hello',
     name: 'hello',
-    component: resolve => {
-      require(['@/views/Hello'], resolve)
-    },
+    component: () => import('@/views/Hello'),
     meta: {
       //是否需要验证后才能访问
       auth: true,
@@ -27,16 +23,12 @@ let ROUTERS = [
   {
     path: '/index',
     name: 'index',
-    component: resolve => {
-      require(['@/views/Index'], resolve)
-    }
+    component: () => import('@/views/Index')
   },
   {
     path: '/403',
     name: '403',
-    component: resolve => {
-      require(['@/views/ErrorPage403'], resolve)
-    },
+    component: () => import('@/views/ErrorPage403')
   }
 ];
 
