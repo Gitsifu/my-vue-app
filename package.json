@@ -20,7 +20,9 @@
     "jquery": "^3.3.1",
     "js-cookie": "^2.2.0",
     "mint-ui": "^2.2.13",
+    "vm-markdown": "^0.2.8",
     "vue": "^2.5.16",
+    "vue-image-crop-upload": "^2.3.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

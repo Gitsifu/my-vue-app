@@ -3,7 +3,7 @@ import ROLE_MAP from '../lib/roleMap'
 // import HelloWorld from '@/components/HelloWorld'
 
 //路由配置，数据结构为数组
-let ROUTERS = [
+const simplePage = [
   {
     path: '/',
     name: 'login',
@@ -31,5 +31,30 @@ let ROUTERS = [
     component: () => import('@/views/ErrorPage403')
   }
 ];
+
+const examplePage = [
+  {
+    path: '/example',
+    name: 'example',
+    component: () => import('@/views/example/example-container'),
+    children: [
+      {
+        path: 'img-upload',
+        name: 'img-upload',
+        component: () => import('@/views/example/img-upload-example')
+      },
+      {
+        path: 'vm-markdown',
+        name: 'vm-markdown',
+        component: ()=> import('@/views/example/vm-markdown-example')
+      }
+    ]
+  }
+]
+
+const ROUTERS = [
+  ...simplePage,
+  ...examplePage
+]
 
 export default ROUTERS;
