@@ -11,7 +11,7 @@
 
   export default {
     name: 'hello',
-    components: {VmMarkdown},
+    components: {},
     props: [],
     data() {
       return {
