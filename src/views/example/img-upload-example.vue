@@ -27,7 +27,7 @@
         props: [],
         data() {
             return {
-              show: true,
+              show: false,
               params: {
                 token: '123456798',
                 name: 'avatar'
