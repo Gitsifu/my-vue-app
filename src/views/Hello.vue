@@ -2,11 +2,11 @@
   <div>
     <div>Hello {{username}}</div>
     <div>个人介绍：{{description}}</div>
+    <button @click="demo">发送</button>
   </div>
 </template>
 
 <script>
-
 
 
   export default {
@@ -20,6 +20,11 @@
       }
     },
     methods: {
+      demo() {
+        this.$HTTP.post(this.$API.demo, {username: 'sifu', age: '19'}, function (res) {
+
+        })
+      }
     },
     mounted() {
       let that = this;

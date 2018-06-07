@@ -2,6 +2,7 @@
 import msg from './codeMsgMap'
 import axios from 'axios';
 import ip from './address'
+import qs from 'qs';
 
 let HTTP = {};
 // 使用由axios库提供的配置的默认值来创建axios实例
@@ -39,7 +40,8 @@ let beforeResponse = instance.interceptors.response.use(function (response) {
  * @returns {{resData}} 成功就返回具体数据
  */
 HTTP.post = function (url, data, callback) {
-  instance.post(ip + url, data)
+  let params = qs.stringify(data)
+  instance.post(ip + url, params)
     .then(function (res) {
       //响应成功回调
       if (res.data.code === '200') {

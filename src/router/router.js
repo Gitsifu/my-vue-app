@@ -46,7 +46,12 @@ const examplePage = [
       {
         path: 'vm-markdown',
         name: 'vm-markdown',
-        component: ()=> import('@/views/example/vm-markdown-example')
+        component: () => import('@/views/example/vm-markdown-example')
+      },
+      {
+        path: 'charts',
+        name: 'charts',
+        component: () => import('@/views/example/charts-example')
       }
     ]
   }
