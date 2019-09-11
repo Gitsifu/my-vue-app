@@ -22,7 +22,7 @@ let params = {
   username: '123',
   password: '123456'
 }
-axios.post(`/user/login`, qs.stringity(params));
+axios.post(`/user/login`, qs.stringify(params));
 ```
 
 方法二：如果不想修改前端代码的话，需要对后台的代码做修改： 
